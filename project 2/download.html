@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+
+        /* make it a grid */
+        display: grid;
+
+        /* define the cells of the grid */
+        /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+
+        /* grid gutter */
+        grid-gap: 20px;
+
+      }
+
+      p {
+        /* style our text */
+        font-size: 0.91em;
+        line-height: 1.3em;
+
+        margin:0;
+        padding:1em;
+
+        background: lightgreen;
+      }
+
+      /* this selects every p that follows a p in the same parent */
+      p ~ p {
+         background:pink;
+      }
+
+      #myGrid div {
+        background: cyan;
+      }
+
+
+      h1 {
+        /* set the h1 to span 2 columns */
+        grid-column: span 2;
+
+        margin: 0;
+        font-size:25px;
+        line-height:1.3em;
+      }
+
+      img {
+        width:100%;
+      }
+
+      .inline-image {
+        /* float the inline image, and style it */
+        max-width: 33%;
+        float: right;
+        padding: 15px;
+        margin: 0 0 0 15px;
+        background: white;
+      }
+
+      a {
+        /* style links */
+        color:hotpink;
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <img src="https://cdn.glitch.com/9da2d04c-f441-4bba-9424-7a62ae9a19c4%2Fmoonlanding.png?1518079708582">
+
+
+  </body>
+</html>

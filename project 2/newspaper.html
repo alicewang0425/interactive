@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+
+        /* make it a grid */
+        display: grid;
+
+        /* define the cells of the grid */
+        /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+
+        /* grid gutter */
+        grid-gap: 20px;
+
+      }
+
+      p {
+        /* style our text */
+        font-size: 0.91em;
+        margin:0;
+        padding:1em;
+
+        background: lightgreen;
+      }
+
+      /* this selects every p that follows a p in the same parent */
+      p ~ p {
+         background:pink;
+      }
+
+      #myGrid div {
+        background: cyan;
+      }
+
+
+      h1 {
+        /* set the h1 to span 2 columns */
+        grid-column: span 2;
+
+        margin: 0;
+        font-size:25px;
+        line-height:1.3em;
+      }
+
+      img {
+        width:100%;
+      }
+
+      .inline-image {
+        /* float the inline image, and style it */
+        max-width: 33%;
+        float: left;
+        padding: 15px;
+        margin: 0 0 0 15px;
+        background: white;
+      }
+
+      a {
+        /* style links */
+        color:hotpink;
+        text-decoration: none;
+      }
+      h1, .transitionDiv {
+      	color: pink;
+      	background: cyan;
+      	transition: color 2s linear;
+      }
+
+      h1:hover, .transitionDiv:hover {
+      	color: cyan;
+      	background: pink !important;
+      }
+
+
+      @keyframes myCoolAnimation {
+      	from {
+      		color: red;
+      	}
+
+      	to {
+      		color: cyan;
+      	}
+      }
+
+    a{
+      	animation-duration: 3s;
+      	animation-name: myCoolAnimation;
+      	animation-iteration-count: infinite;
+      	animation-direction: normal;
+      	animation-timing-function: linear;
+      }
+
+    </style>
+  </head>
+  <body>
+  <div id="myGrid">
+
+    <p>
+      <img class="inline-image" src="https://cdn.glitch.com/1719fec4-0c8e-4bdd-a058-4a9618dece2e%2Fcat.jpg?1517191861033">
+      <strong>make this grid 3 columns, while keeping the header alone on the first row</strong>
+      <br><br>
+      <strong>make this image sit to the left of the text 👉🏻</strong>
+      <p></p>
+    </p>
+
+          <div style=
+          "grid-column:span 3;
+            border-top:solid 2px black;
+            border-bottom:solid 2px black;
+            padding-left:5px;">
+            <p style="text-align: center;">make this grid 3 columns, while keeping the header alone on the first row
+            </p>
+          </div>
+
+  <p style="grid-column:span 3;text-align: center;">
+      <strong style="font-size:200pt;">Title</strong>
+  </p>
+  <p style="grid-column:span 2">
+    <img src="https://cdn.glitch.com/9da2d04c-f441-4bba-9424-7a62ae9a19c4%2Fmoonlanding.png?1518079708582">
+<p>
+Ficieni dis nobisit, quiassunti consed ute cus num restis etum voluptam, comnisimus sam es et pre idunt.
+Faccum, aboreptatem sum facipsum repe arum escianduntia volorehenit aruptur sunt lacest, tem aut harci dolo tem repta por acerferspero eum ipsam et rest odit et officiam, eati velibusam as dic tem fugiat.
+Coreptur? Met omnihitibus ut venduci pidunt reicimusda consequo quides ea sim quidem quam andebis simi, vent ant.
+Uga. Tatem quatis etum lam, acipsandant, autatem fuga. Ut aut earunt fugia ape veliquid es sinullu ptatemp ereptaspelis denimendam, to beat.
+Ab ipid quiaspit est aut laut experferum ulparuntori dere, net repel moluptae voluptisim ea nonsequis ium eos ea serum reperatias aut et et aut latemporia cum sinctius, enti utet hilluptias presend antium rat ex excepro viditae es andis vitam, opturib usciis et harciis qui non et molorro moleniam, qui cupta perferio vellatur, omnis am, sunt adipsunt aut apero tempore excesequis dicillitio blabores enditis sit exceptam, cusdandi dem. Eque rest pelloremquis maximus cidipsa doles dolupti dolorep 
+</div>
+  </body>
+</html>
