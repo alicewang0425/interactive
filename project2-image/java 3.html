@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>presentation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+
+        /* make it a grid */
+        display: grid;
+
+        /* define the cells of the grid */
+        /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+
+        /* grid gutter */
+        grid-gap: 20px;
+
+      }
+
+      p {
+        /* style our text */
+        font-size: 0.91em;
+        margin:0;
+        padding:1em;
+
+      }
+
+      /* this selects every p that follows a p in the same parent */
+      p ~ p {
+      }
+
+
+
+      h1 {
+        /* set the h1 to span 2 columns */
+        grid-column: span 2;
+
+        margin: 0;
+        font-size:25px;
+        line-height:1.3em;
+      }
+
+      img, div {
+        width:30vw;
+        margin: 0px auto 0px auto;
+        display: block;
+      }
+
+      .inline-image {
+        /* float the inline image, and style it */
+        max-width: 33%;
+        float: left;
+        padding: 15px;
+        margin: 0 0 0 15px;
+        background: white;
+      }
+
+      a {
+        /* style links */
+        text-decoration: none;
+      }
+      h1, .transitionDiv {
+      	background: cyan;
+      	transition: color 2s linear;
+      }
+
+      h1:hover, .transitionDiv:hover {
+      	color: cyan;
+      	background: pink !important;
+      }
+
+
+      @keyframes myCoolAnimation {
+      	from {
+      		color: red;
+      	}
+
+      	to {
+      		color: cyan;
+      	}
+      }
+
+    a{
+      	animation-duration: 3s;
+      	animation-name: myCoolAnimation;
+      	animation-iteration-count: infinite;
+      	animation-direction: normal;
+      	animation-timing-function: linear;
+      }
+
+    .ii{
+      grid-column:span 3;
+      text-align: center;
+      display:block;
+
+    }
+
+    .iii{
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    }
+
+    div{
+      display: block;
+    }
+
+    .haha{
+      font-size:20pt;
+      font-family: 'Raleway', sans-serif;
+    }
+
+
+    .card {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+    .box {
+        display: inline-block;
+        padding: .15em .3em;
+        border: 0;
+    }
+
+    .b {
+    background: red;
+    display: inline-block;
+    padding: .15em .3em;
+    color: white;
+    border: 0;
+}
+
+.clickable {
+    max-width: 300px;
+}
+.clickable:hover {
+    max-width: 600px;
+}
+.clickable:active {
+    max-width: 600px;
+}
+
+#airbnb {
+  background:url(airbnb-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:90px;
+}
+#airbnb.desktop {
+  background:url(airbnb-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:100vw;
+  height:90px;
+}
+#amazon {
+  background:url(amazon-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:125px;
+}
+#amazon.desktop {
+  background:url(amazon-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:100vw;
+  height:125px;
+}
+#google {
+  background:url(google-p.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#google.desktop {
+  background:url(google-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:100vw;
+  height:150px;
+}
+#facebook {
+  background:url(facebook-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#facebook.desktop {
+  background:url(facebook-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#pin {
+  background:url(pin-p.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:180px;
+}
+#pin.desktop {
+  background:url(pin-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#apple {
+  background:url(apple-p.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:300px;
+}
+#apple.desktop {
+  background:url(apple-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:130px;
+}
+#youtube {
+  background:url(youtube-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:100px;
+}
+#youtube.desktop {
+  background:url(youtube-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:130px;
+}
+#yelp {
+  background:url(yelp-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:98px;
+}
+#yelp.desktop {
+  background:url(yelp-c.png);
+  background-size: contain;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#ins {
+  background:url(ins-p.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:130px;
+  width:100vw;
+}
+#ins.desktop {
+  background:url(ins-c.png);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:130px;
+}
+#netflix {
+  background:url(netflix-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#netflix.desktop {
+  background:url(netflix-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#msn {
+  background:url(msn-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#msn.desktop {
+  background:url(msn-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#twitter {
+  background:url(twitter-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#twitter.desktop {
+  background:url(twitter-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#ch {
+  background:url(ch-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#ch.desktop {
+  background:url(ch-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#ebay {
+  background:url(ebay-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#ebay.desktop {
+  background:url(ebay-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#imdb {
+  background:url(imdb-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#imdb.desktop {
+  background:url(imdb-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#times {
+  background:url(times-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#times.desktop {
+  background:url(times-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#bing {
+  background:url(bing-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#bing.desktop {
+  background:url(bing-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#att {
+  background:url(att-p.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+#att.desktop {
+  background:url(att-c.png);
+  background-size: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width:100vw;
+  height:150px;
+}
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+  <body style="background-color:black">
+
+
+<p style="grid-column:span 3;text-align: center;">
+
+            <div id="airbnb" class="clickable"></div>
+            <div id="amazon" class="clickable"></div>
+            <div id="google" class="clickable"></div>
+            <div id="facebook" class="clickable"></div>
+            <div id="pin" class="clickable"></div>
+            <div id="apple" class="clickable"></div>
+            <div id="youtube" class="clickable"></div>
+            <div id="yelp" class="clickable"></div>
+            <div id="ins" class="clickable"></div>
+            <div id="msn" class="clickable"></div>
+            <div id="twitter" class="clickable"></div>
+            <div id="ch" class="clickable"></div>
+            <div id="ebay" class="clickable"></div>
+            <div id="imdb" class="clickable"></div>
+            <div id="times" class="clickable"></div>
+            <div id="bing" class="clickable"></div>
+            <div id="att" class="clickable"></div>
+
+    </p>
+
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>presentation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      #myGrid {
+        margin:100px;
+
+        /* make it a grid */
+        display: grid;
+
+        /* define the cells of the grid */
+        /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+
+        /* grid gutter */
+        grid-gap: 20px;
+
+      }
+
+      p {
+        /* style our text */
+        font-size: 0.91em;
+        margin:0;
+        padding:1em;
+
+      }
+
+      /* this selects every p that follows a p in the same parent */
+      p ~ p {
+      }
+
+
+
+      h1 {
+        /* set the h1 to span 2 columns */
+        grid-column: span 2;
+
+        margin: 0;
+        font-size:25px;
+        line-height:1.3em;
+      }
+
+      img {
+        width:100%;
+      }
+
+      .inline-image {
+        /* float the inline image, and style it */
+        max-width: 33%;
+        float: left;
+        padding: 15px;
+        margin: 0 0 0 15px;
+        background: white;
+      }
+
+      a {
+        /* style links */
+        text-decoration: none;
+      }
+      h1, .transitionDiv {
+      	background: cyan;
+      	transition: color 2s linear;
+      }
+
+      h1:hover, .transitionDiv:hover {
+      	color: cyan;
+      	background: pink !important;
+      }
+
+
+      @keyframes myCoolAnimation {
+      	from {
+      		color: red;
+      	}
+
+      	to {
+      		color: cyan;
+      	}
+      }
+
+    a{
+      	animation-duration: 3s;
+      	animation-name: myCoolAnimation;
+      	animation-iteration-count: infinite;
+      	animation-direction: normal;
+      	animation-timing-function: linear;
+      }
+
+    .ii{
+      grid-column:span 3;
+      text-align: center;
+      display:block;
+
+    }
+
+    .iii{
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    }
+
+    div{
+      display: block;
+    }
+
+    .haha{
+      font-size:20pt;
+      font-family: 'Raleway', sans-serif;
+    }
+
+
+    .card {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+    .box {
+        display: inline-block;
+        padding: .15em .3em;
+        border: 0;
+    }
+
+    .b {
+    background: red;
+    display: inline-block;
+    padding: .15em .3em;
+    color: white;
+    border: 0;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="myGrid">
+<p style="grid-column:span 3;text-align: center;">
+
+            <img src="airbnb-p.png">
+
+
+              <img src="amazon-p.png">
+
+
+
+                  <img src="google-p.jpg">
+
+
+                      <img src="facebook-p.png">
+
+
+                          <img src="pin-p.jpg">
+
+
+                              <img src="apple-p.jpg">
+
+
+                                  <img src="youtube-p.png">
+
+
+                                      <img src="yelp-p.png">
+
+
+                                          <img src="ins-p.jpg">
+                                        </p>
+
+ </div>
+  </body>
+</html>
