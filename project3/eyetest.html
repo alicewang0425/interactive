@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+element.style{
+  top: 505px;
+  left: -21.66px;
+  width: 871.32px;
+  transform-origin: 50% 50%;
+  transform: rotate(25deg);
+}
+
+img{
+  position:absolute;
+  /* width: 100%;
+  height: auto;
+  top: 400px; */
+}
+
+.card{
+  /* position: relative; */
+}
+
+.card canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media {
+	body {
+      overflow:hidden
+    }
+}
+
+@media screen {
+    .nevermind {
+      display: none;
+      }
+
+}
+
+
+@media print {
+  #mask {
+    width:100vw;
+    height:50vh;
+    position: absolute;
+    bottom: 0;
+    background: white;
+    z-index: 10000;
+  }
+
+  #mouse {
+    position: absolute;
+    top: 0;
+  }
+
+}
+
+
+  </style>
+
+  <script type="text/javascript" src="eye.js" defer></script>
+  <script type="text/javascript" src="mouse.js" defer></script>
+  <script class="nevermind" type="text/javascript" src="mouse2.js" defer></script>
+
+</head>
+
+<body style="margin:0;
+              overflow:hidden;">
+
+<p class="nevermind" style="text-align: center; font-family: impact; font-size: 100pt";>WE'RE WATCHING YOU</p>
+
+<div id="mask">
+  </div>
+    <img id="circle" src="eye.png"></img>
+
+    <div class="card build nevermind" notes="">
+    			<canvas id="mouse"></canvas>
+    </div>
+
+</body>
+</html>
