@@ -4,7 +4,7 @@
 setTimeout(function(){
 
 	window.print();
-}, 5000)
+}, 8000)
 
 
 
